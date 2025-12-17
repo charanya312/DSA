@@ -3,13 +3,14 @@ class Solution {
         if(x<0){
             return false;
         }
-        long m=x;
-        long rev=0;
+        int m=x;
+        int rev=0;
         while(m!=0){
-            int rem=(int) (m%10);
-            rev=rev*10+rem;
+            int d=m%10;
+            rev=rev*10+d;
             m=m/10;
         }
-        return (rev==x);
+        if(rev==x) return true;
+        else return false;
     }
 }
